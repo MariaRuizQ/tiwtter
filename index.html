@@ -17,9 +17,14 @@
       </figure>
       <div class="form">
         <form class="" action="index.html" method="get">
-          <textarea name="name" rows="8" cols="50" id="message"></textarea>
-          <input class="text-upp" type="submit" name="" value="tweet" id="button"/>
-          <div id="characters-remaining"></div>
+          <fieldset>
+            <textarea onclick="caracteres();" onblur="caracteres();" onkeypress="caracteres();" name="name" rows="5" cols="50" id="message"></textarea>
+            <br>
+            <div class="button">
+              <input class="text-upp" type="submit" name="" value="tweet" onclick="enviado()" id="button"/>
+            </div>
+            <div id="characters-remaining"></div>
+          </fieldset>
         </form>
       </div>
     </main>
