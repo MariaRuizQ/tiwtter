@@ -37,7 +37,6 @@ function anadir() {
       nombre.value.length === 0 ||
       /^\s+$/.test(nombre.value)
     ) {
-      name = "Anónimo";
     } else {
       name = nombre.value;
     }
@@ -46,8 +45,6 @@ function anadir() {
     var pnom = document.createElement("p");
     var p = document.createElement("p");
     var hr = document.createElement("hr");
-    var eliminar = document.createElement("input");
-    var editar = document.createElement("input");
     var fecha = new Date();
     var dia = fecha.getDate();
     var mes;
@@ -115,24 +112,14 @@ function anadir() {
     pnom.setAttribute("class", "pnom");
     p.setAttribute("class", "p");
     hr.setAttribute("class", "hr");
-    eliminar.setAttribute("class", "eliminar");
-    editar.setAttribute("class", "editar");
     div.appendChild(pnom);
     div.appendChild(p);
-    div.appendChild(eliminar);
-    div.appendChild(editar);
     div.appendChild(hr);
     textarea.value = "";
     nombre.value = "";
-    eliminar.type = "button";
-    eliminar.value = "Eliminar";
-    editar.type = "button";
-    editar.value = "Editar";
     textarea.focus();
   }
-  function eliminarc() {
-    div.remove();
-  }
+
   eliminar.addEventListener("click", eliminarc);
   function editarc() {
     var botone = document.createElement("input");
@@ -161,78 +148,7 @@ function anadir() {
     } else {
       name = nombre.value;
     }
-      var fecha = new Date();
-    var dia = fecha.getDate();
-    var mes;
-    switch (fecha.getMonth()) {
-      case 0:
-        mes = "Enero";
-        break;
-      case 1:
-        mes = "Febrero";
-        break;
-      case 2:
-        mes = "Marzo";
-        break;
-      case 3:
-        mes = "Abril";
-        break;
-      case 4:
-        mes = "Mayo";
-        break;
-      case 5:
-        mes = "Junio";
-        break;
-      case 6:
-        mes = "Julio";
-        break;
-      case 7:
-        mes = "Agosto";
-        break;
-      case 8:
-        mes = "Septiembre";
-        break;
-      case 9:
-        mes = "Octubre";
-        break;
-      case 10:
-        mes = "Noviembre";
-        break;
-      case 11:
-        mes = "Diciembre";
-        break;
-      default:
-        break;
-    }
-    var year = fecha.getFullYear();
-    var hora = fecha.getHours();
-    if (hora < 10) {
-      hora = "0" + hora;
-    }
-    var minutos = fecha.getMinutes();
-    if (minutos < 10) {
-      minutos = "0" + minutos;
-    }
-    pnom.innerHTML =
-      "Editado por " +
-      name +
-      " el " +
-      dia +
-      " de " +
-      mes +
-      " del " +
-      year +
-      " a las " +
-      hora +
-      ":" +
-      minutos +
-      ".";
-      p.innerHTML = textarea.value;
-      div.replaceChild(editar, botone);
-      textarea.value = "";
-      nombre.value = "";
-      textarea.focus();
-      edicion = false;
+
       }
     }
     botone.addEventListener("click", edicionc);
