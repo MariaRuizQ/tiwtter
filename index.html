@@ -7,27 +7,25 @@
     <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header>
-      <h1>Twitter</h1>
-    </header>
-    <main>
-      <figure>
-        <img src="assets/imagenes/twitter.PNG" alt="">
-      </figure>
-      <div class="form">
-        <form class="" action="index.html" method="get">
-          <fieldset>
-            <textarea onclick="caracteres();" onblur="caracteres();" onkeypress="caracteres();" name="name" rows="5" cols="50" id="message"></textarea>
+<body>
+  <header>
+    <h1>Twitter</h1>
+  </header>
+  <main>
+    <figure>
+      <img src="assets/imagenes/twitter.PNG" alt="">
+    </figure>
+    <div id="comentarios" class="form">
+        <fieldset id="nuevo" class="nuevo">
+            <textarea onclick="caracteres();" onblur="caracteres();" onkeypress="caracteres();" name="name" rows="5" cols="50" id="textarea"></textarea autofocus>
             <br>
-            <div class="button">
-              <input class="text-upp" type="submit" name="" value="tweet" onclick="enviado()" id="button"/>
+            <div class="">
+              <button id="boton" class="boton">TWEET</button>
+              <div id="characters-remaining"></div>
             </div>
-            <div id="characters-remaining"></div>
-          </fieldset>
-        </form>
-      </div>
-    </main>
-    <script type="text/javascript" src="js/app.js"></script>
-  </body>
+        </fieldset>
+    </div>
+  </main>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
 </html>
