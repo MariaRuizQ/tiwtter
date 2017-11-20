@@ -2,30 +2,96 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css.css">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
-<body>
-  <header>
-    <h1>Twitter</h1>
-  </header>
-  <main>
-    <figure>
-      <img src="assets/imagenes/twitter.PNG" alt="">
-    </figure>
-    <div id="comentarios" class="form">
-        <div id="nuevo" class="nuevo">
-            <textarea onclick="caracteres();" onblur="caracteres();" onkeypress="caracteres();" name="name" rows="5" cols="50" id="textarea"></textarea autofocus>
-            <hr>
+  <body>
+    <header>
+      <div class="header">
+        <div class="contenedor fijando-cajas">
+          <section class="nav">
+            <div>
+              <ul>
+                <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a><a href="#"> Inicio</a></li>
+                <li><a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a><a href="#"> Notificaciones</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a><a href="#"> Mensajes</a></li>
+              </ul>
+            </div>
+          </section>
+          <section class="logo">
+              <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </section>
+          <section class="button-twittear">
+            <div class="button">
+              <a class="button-twitt" href="#">Twittear</a>
+            </div>
+            <div>
+              <a href=""><i class="fa fa-user" aria-hidden="true"></i></a>
+            </div>
+            <div>
+              <input type="text" name="" value="" placeholder = 'Buscar en Twitter'>
+            </div>
+          </section>
+       </div>
+      </div>
+    </header>
+    <main class="contenedor fijando-cajas">
+      <section class="parte-izquierda">
+        <div class="parte-arriba">
+          <div class="primero"><a href="#"><div></div></a></div>
+          <div class="segundo"><a href="#"><a href=""><i class="fa fa-camera" aria-hidden="true"></i></a></a></div>
+          <div class="tercero">
+            <div class="izquierda uno"><a href="#"><div>María Teresa Ruiz Quispe</div></a></div>
+            <div class="izquierda dos"><a href="#"><div>@RuizMariaQuispe</div></a></div>
+            <div class="abajo"><a href="#"><div>Tweets</div></a></div>
+            <div class="abajo-dos"><a href="#"><div>0</div></a></div>
+          </div>
+        </div>
+        <div class="parte-abajo">
+          <div>
+            <p class="palabra">Tendencias para ti <a  class="enlace" href="#">Cambiar</a></p>
+          </div>
+        </div>
+      </section>
+      <section id='comentarios' class="parte-central">
+          <div id='nuevo' class="parte-twitter" id='twitter'>
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <textarea onclick="caracteres();" onblur="caracteres();" onkeypress="caracteres();" id='textarea' name="name" rows="1" cols=""></textarea autofocus>
             <div class="">
               <button id="boton" class="boton">TWEET</button>
+              <div id="characters-remaining">140</div>
             </div>
-            <div id="characters-remaining"></div>
+          </div>
+      </section>
+      <section class="parte-derecha">
+        <div class="parte-derecha-arriba">
+            <div>
+              <p class="palabra">A quién seguir <a  class="enlace" href="#">Actualizar</a><a  class="enlace" href="#">Ver todos</a></p>
+              <hr>
+            </div>
+            <div class="derecha">
+              <a href="#"><img src="assets/imagenes/Gmail.ico" alt=""></a>
+              <a href="#"><div class="palabra-arriba">Encuentra a personas que conoces</div><div class="palabra-abajo">Importa tus contactos de Gmail</div></a>
+              <hr>
+              <a href="#"><div class="ultima-palabra">Conecta otras libretas de direcciones</div></a>
+            </div>
         </div>
-    </div>
-  </main>
-  <script type="text/javascript" src="js/app.js"></script>
-</body>
+        <div class="derecha-abajo">
+            <div class="parte-derecha-abajo">
+              <p> &#169; 2017 Twitter <a href="#">Sobre nosotros </a><a href="#">Centro de Ayuda </a><a href="#">Condiciones </a><a href="#">Política de privacidad</a><a href="#">Cookies </a><a href="#">Información sobre anuncios </a><a href="#">Marca </a></p>
+            </div>
+            <hr>
+            <div class="parte-derecha-abajo-2">
+              <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+              <a href="#">Publicitar en Twitter</a>
+            </div>
+        </div>
+      </section>
+    </main>
+
+
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
 </html>
